@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of M Mohsin - Frontend Developer" />
+  <title>M Mohsin | Frontend Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>M Mohsin</h1>
+    <p><strong>Frontend Developer | JavaScript | React</strong></p>
+    <nav>
+      <ul>
+        <li><a href="#about" aria-label="Go to About Section">About</a></li>
+        <li><a href="#projects" aria-label="Go to Projects Section">Projects</a></li>
+        <li><a href="#skills" aria-label="Go to Skills Section">Skills</a></li>
+        <li><a href="#contact" aria-label="Go to Contact Section">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <figure>
+        <img src="profile.jpg" alt="Profile picture of M Mohsin" />
+        <figcaption>That's me! 👋</figcaption>
+      </figure>
+      <p>I am a frontend developer with 5 years of experience building responsive web applications using modern
+        JavaScript frameworks like React, and tools like Redux, Webpack, and Vite.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl>
+        <dt>Languages</dt>
+        <dd>JavaScript, TypeScript, HTML5, CSS3</dd>
+
+        <dt>Frameworks</dt>
+        <dd>React, Next.js, Node.js</dd>
+
+        <dt>Tools</dt>
+        <dd>Vite, Git, Webpack, Figma</dd>
+      </dl>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <article>
+        <h3>Project A - Portfolio Site</h3>
+        <p>A modern, mobile-first portfolio built using semantic HTML, React, and Tailwind CSS.</p>
+        <a href="https://github.com/mohsin/portfolio" target="_blank" rel="noopener">GitHub Repo</a>
+      </article>
+
+      <article>
+        <h3>Project B - Task Manager App</h3>
+        <p>A full-stack MERN app with authentication, task lists, and responsive design.</p>
+        <a href="https://taskmanager.com" target="_blank" rel="noopener">Live Demo</a>
+      </article>
+    </section>
+
+    <!-- Stats Section with <meter> and <progress> -->
+    <section id="stats">
+      <h2>Stats & Progress</h2>
+      <p>Weekly coding hours:</p>
+      <meter min="0" max="40" value="30">30 out of 40 hours</meter>
+
+      <p>Portfolio site development progress:</p>
+      <progress value="80" max="100">80%</progress>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <fieldset>
+          <legend>Get in Touch</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Send</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Collapsible FAQs using <details> -->
+    <section id="faq">
+      <h2>FAQs</h2>
+
+      <details>
+        <summary>What technologies do you use most?</summary>
+        <p>React, JavaScript (ES6+), HTML5, SCSS, Redux, and Axios.</p>
+      </details>
+
+      <details>
+        <summary>Do you work with backend?</summary>
+        <p>Yes, I have experience with Node.js and Express, especially for REST APIs.</p>
+      </details>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <time datetime="2025">2025</time> M Mohsin. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function submitForm() {
+      alert("Form submitted!");
+    }
+  </script>
+</body>
+
+</html>
