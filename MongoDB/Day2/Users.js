@@ -1,22 +1,7 @@
 import mongoose from "mongoose";
 import User from "./Models/User.js";
 
-// Search
-// router.get('/search', async (req, res) => {
-//   try {
-//     const { q } = req.query; // q = search query
 
-//     const products = await Product.find(
-//       { $text: { $search: q } },
-//       { score: { $meta: "textScore" } }
-//     ).sort({ score: { $meta: "textScore" } });
-//     res.json(products);
-//   } catch (error) {
-//     res.status(500).json({ message: error.message });
-//   }
-// });
-
-// Function to add 10 users
 async function addDummyUsers() {
   try {
     const users = [
@@ -112,4 +97,40 @@ async function addDummyUsers() {
   }
 }
 
-export { addDummyUsers }
+
+async function getAllUsers() {
+  try {
+    const result = await User.find();
+    console.log("10 Users added successfully:", result);
+    return result
+
+  } catch (error) {
+    console.error("Error adding users:", error);
+  }
+}
+
+async function searchUser(name) {
+  try {
+    // const result = await User.find({ name: name });
+    // const result = await User.find({
+    // bio: { $regex: name, $options: "i" }
+    // bio: name
+    // case-insensitive search
+    // }).limit(10);
+    // optional: limit to 10 results
+
+    const result = await User.find(
+      { $text: { $search: name } },
+      { score: { $meta: "textScore" } }
+    ).sort({ score: { $meta: "textScore" } });
+
+    console.log("Users found:", result.length);
+    return result;
+    console.log("10 Users added successfully:", result);
+    return result
+  } catch (error) {
+    console.error("Error adding users:", error);
+  }
+}
+
+export { addDummyUsers, getAllUsers, searchUser }
