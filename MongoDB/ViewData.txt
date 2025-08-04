@@ -1,0 +1,18 @@
+1- select db
+	use DBName
+2- show collections
+ show collections
+3- db.collectionName.find()
+ return all data in desending order
+4- it will return data in from latest insert to end 
+  db.collectionName.find().sort({_id"-1})
+5- will return 5 lastest entries 
+ db.collectionName.find().sort({_id:-1}).limit(5);
+
+Filter 
+
+1- get data using column names
+ db.collectionName.find({name:"mohsin"})
+2- get data using different column names
+ db.collectionName.find({name:"mohsin", age:{$gt: 30}}
+ get user name mohsin where age > 30
